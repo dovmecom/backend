@@ -11,18 +11,6 @@
 |
 */
 
-/*public function signup(Request $request){
-
-}
-
-
-public function signin(Request $request){
-
-}
-
-public function forgotPassword(Request $request){
-
-}*/
 
 Route::get('/', function () {
     return view('welcome');
