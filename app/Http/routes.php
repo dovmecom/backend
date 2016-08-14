@@ -11,6 +11,31 @@
 |
 */
 
+/*public function signup(Request $request){
+
+}
+
+
+public function signin(Request $request){
+
+}
+
+public function forgotPassword(Request $request){
+
+}*/
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('signin', 'Member\\MemberController@signin');
+
+Route::get('forgot-password', 'Member\\MemberController@forgotPassword');
+
+Route::get('signup', 'Member\\MemberController@signup');
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('me', function(){
+
+    });
 });
